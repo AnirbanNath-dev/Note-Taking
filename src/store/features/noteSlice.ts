@@ -20,11 +20,12 @@ const noteSlice = createSlice({
                 id : nanoid(),
                 title : actions.payload,
                 body : actions.payload,
-                tags : [...actions.payload],
+                tags : ["hello"],
                 createdAt : new Date()
             } 
 
             state.push(note);
+            console.log(state)
         },
         deleteNote : (state , actions) =>{
             const { id } = actions.payload;
