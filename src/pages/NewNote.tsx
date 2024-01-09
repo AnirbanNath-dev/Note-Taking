@@ -10,7 +10,7 @@ function NewNote() {
         <TbNotes className="text-5xl text-green-600" />
         <h1 className="text-3xl tracking-widest uppercase font-bold">Create a New Note</h1>
         <TbNotes className="text-5xl text-green-600" />
-
+        
       </div>
 
       <NoteForm />

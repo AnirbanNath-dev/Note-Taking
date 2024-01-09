@@ -42,7 +42,7 @@ function NoteForm() {
         <input 
         type="text"
         className="border-2 border-[rgba(0,0,0,0.6)] p-2 rounded-lg text-2xl"
-        placeholder="Tags..." 
+        placeholder="Tags separated by comma..." 
         
         />
 
