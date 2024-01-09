@@ -11,9 +11,9 @@ const noteSlice = createSlice({
 
             const note:Note = {
                 id : nanoid(),
-                title : actions.payload,
-                body : actions.payload,
-                tags : actions.payload,
+                title : actions.payload.title,
+                body : actions.payload.body,
+                tags : actions.payload.tags,
                 createdAt : new Date()
             } 
 

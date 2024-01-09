@@ -1,18 +1,15 @@
-import { useSelector } from "react-redux"
-import NoteType from "../types/noteType"
-function Note() {
+import NoteProps from "../types/noteProps"
 
-  const notes = useSelector((state:NoteType[] )=> state)
+function Note({ title,  body , tags  } : NoteProps) {
 
-  console.log(notes);
   
   return (
     <div className="p-4 rounded-lg border-2 border-black flex flex-col items-center">
 
-      <h1>Title</h1>
-      <p>lajsdkofjnasofdoaisjfdioasjsdufasjfdoas</p>
-      <span>tags</span>
-
+      <h1>{title}</h1>
+      <p>{body}</p>
+      <span>{tags}</span>
+        
 
     </div>
 
