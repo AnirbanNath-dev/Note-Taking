@@ -10,7 +10,7 @@ function NoteForm() {
 
   const [content , setContent] = useState<string>('')
   const [title , setTitle] = useState<string>('')
-  const [tags , setTags] = useState<string[]>([])
+  const [tags , setTags] = useState<string>('')
   const [required , setRequired] = useState<boolean>(false)
 
   const navigate= useNavigate()
@@ -18,8 +18,8 @@ function NoteForm() {
   const handleSave = ():void => {
     
     if((content.trim().length !== 0) && (title.trim().length !==0)){
-
-      dispatch(addNote({ title : title , body : content  }))
+      const tagArray = tags.split(',')
+      dispatch(addNote({ title : title , body : content ,tags : tagArray }))
       setRequired(false)
       navigate('/')
     }
@@ -43,7 +43,8 @@ function NoteForm() {
         type="text"
         className="border-2 border-[rgba(0,0,0,0.6)] p-2 rounded-lg text-2xl"
         placeholder="Tags separated by comma..." 
-        
+        onChange={(e)=> setTags(e.target.value)}
+        value={tags}
         />
 
 

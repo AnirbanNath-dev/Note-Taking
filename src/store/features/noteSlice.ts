@@ -20,7 +20,7 @@ const noteSlice = createSlice({
                 id : nanoid(),
                 title : actions.payload,
                 body : actions.payload,
-                tags : ["hello"],
+                tags : actions.payload,
                 createdAt : new Date()
             } 
 
