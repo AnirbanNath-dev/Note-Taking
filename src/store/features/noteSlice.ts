@@ -1,12 +1,5 @@
 import { createSlice , nanoid} from "@reduxjs/toolkit";
-
-interface Note{
-    id : string;
-    title : string;
-    body : string;
-    tags : string[];
-    createdAt : Date;
-}
+import Note from "../../types/noteType";
 
 const initialState : Note[]= [];
 
