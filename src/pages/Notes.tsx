@@ -3,7 +3,7 @@ import Note from "../components/Note"
 import NoteType from "../types/noteType"
 
 function Notes() {
-
+  
   const notes = useSelector((state: NoteType[])=> state)
 
   return (
@@ -15,8 +15,8 @@ function Notes() {
 
       <div className="flex flex-wrap gap-4">
           {
-            notes.map(note =>(
-              <Note title={note.title} body={note.body} tags={note.tags}/>
+            notes.map((note , index) =>(
+              <Note key={index} title={note.title} body={note.body} tags={note.tags}/>
             ))
           }
       </div>

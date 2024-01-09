@@ -14,7 +14,6 @@ const noteSlice = createSlice({
                 title : actions.payload.title,
                 body : actions.payload.body,
                 tags : actions.payload.tags,
-                createdAt : new Date()
             } 
 
             state.push(note);

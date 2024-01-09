@@ -3,7 +3,7 @@ interface Note{
     title : string;
     body : string;
     tags : string[];
-    createdAt : Date;
+    
 }
 
 export default Note
