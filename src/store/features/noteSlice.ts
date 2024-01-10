@@ -14,10 +14,9 @@ const noteSlice = createSlice({
                 title : actions.payload.title,
                 body : actions.payload.body,
                 tags : actions.payload.tags,
-            } 
+            }
 
             state.push(note);
-            console.log(state)
         },
         deleteNote : (state , actions) =>{
             const { id } = actions.payload;
@@ -30,6 +29,8 @@ const noteSlice = createSlice({
 })
 
 export const { addNote , deleteNote , editNote} = noteSlice.actions
+
+
 
 export default noteSlice.reducer
 

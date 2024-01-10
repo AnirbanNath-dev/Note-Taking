@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux"
 import Note from "../components/Note"
 import NoteType from "../types/noteType"
+import { useMemo } from "react"
 
 function Notes() {
   
-  const notes = useSelector((state: NoteType[])=> state)
+  const notes = useMemo(()=> useSelector((state:NoteType[]) => state) , [])
 
   return (
     <div className="w-screen p-10 my-20 flex flex-col items-center">
@@ -19,8 +20,7 @@ function Notes() {
               <Note key={index} title={note.title} body={note.body} tags={note.tags}/>
             ))
           }
-      </div>
-        
+      </div>        
 
     </div>
   )
